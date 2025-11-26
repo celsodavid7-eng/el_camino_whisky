@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 26-11-2025 a las 22:32:00
+-- Tiempo de generación: 26-11-2025 a las 22:38:31
 -- Versión del servidor: 10.4.32-MariaDB
 -- Versión de PHP: 8.2.12
 
@@ -347,12 +347,8 @@ CREATE TABLE `project_content` (
 --
 
 INSERT INTO `project_content` (`id`, `section_title`, `section_content`, `display_order`, `is_active`, `created_at`, `updated_at`) VALUES
-(1, 'Apreciado lector:', 'Así como vos, un día —hace ya algunos años— decidí que quería conocer más sobre este apreciado y, para muchos, misterioso espirituoso. Pensé que el camino sería fácil: después de todo, hoy existen infinidad de canales de información y personas dispuestas a compartir su experiencia en casi cualquier tema. ¡Pero grande fue mi sorpresa cuando descubrí que no era así!', 1, 1, '2025-11-26 13:56:44', '2025-11-26 13:56:44'),
-(2, '...', 'Pronto me di cuenta de que no existe un camino claro para quienes desean empezar desde cero. La mayoría de los canales hablan de botellas específicas, describen notas de cata y cuentan detalles sobre las destilerías —algo valioso, sin duda—, pero nadie explica qué botellas comprar, dónde hacerlo o cómo leer una etiqueta. Y si encontrás a alguien que más o menos lo hace, suele referirse a un mercado muy distinto al nuestro.', 2, 1, '2025-11-26 13:56:44', '2025-11-26 21:28:05'),
-(3, '...', 'Aun así, decidí seguir adelante. Con las herramientas que tenía, fui aprendiendo paso a paso, botella a botella, hasta formar mi propio criterio. Cada sorbo era una lección, cada aroma un descubrimiento, y cada botella una nueva página en este libro sensorial que estaba escribiendo con mi paladar.', 3, 1, '2025-11-26 13:56:44', '2025-11-26 21:28:32'),
-(4, '...', 'Con el tiempo, nació en mí la idea de compartir ese aprendizaje y crear una guía sencilla que acompañe a cualquiera que quiera iniciar este recorrido tan apasionante. No quería que otros tuvieran que pasar por las mismas dificultades que yo enfrenté. Quería allanar el camino, hacerlo accesible y disfrutable desde el primer momento.', 4, 1, '2025-11-26 13:56:44', '2025-11-26 21:28:41'),
-(5, '...', 'Creemos que el whisky no es solo una bebida, sino una experiencia cultural, un viaje sensorial que conecta tradiciones, territorios y personas. Cada botella cuenta una historia, cada destilería tiene su alma, y cada cata es una oportunidad para descubrir algo nuevo sobre nosotros mismos.', 5, 1, '2025-11-26 13:56:44', '2025-11-26 21:28:54'),
-(6, '...', 'Ojalá que esta pequeña guía te ayude a dar tus primeros pasos en este hermoso camino. Que cada sorbo te acerque no solo al entendimiento del whisky, sino al placer de descubrir, aprender y compartir. El camino del whisky es, en definitiva, el camino del conocimiento sensorial.', 6, 1, '2025-11-26 13:56:44', '2025-11-26 21:29:06');
+(7, 'Apreciado lector', 'Así como vos, un día —hace ya algunos años— decidí que quería conocer más sobre este apreciado y, para muchos, misterioso espirituoso. Pensé que el camino sería fácil: después de todo, hoy existen infinidad de canales de información y personas dispuestas a compartir su experiencia en casi cualquier tema. ¡Pero grande fue mi sorpresa cuando descubrí que no era así!\r\n\r\nPronto me di cuenta de que no existe un camino claro para quienes desean empezar desde cero. La mayoría de los canales hablan de botellas específicas, describen notas de cata y cuentan detalles sobre las destilerías —algo valioso, sin duda—, pero nadie explica qué botellas comprar, dónde hacerlo o cómo leer una etiqueta. Y si encontrás a alguien que más o menos lo hace, suele referirse a un mercado muy distinto al nuestro.', 0, 1, '2025-11-26 21:36:35', '2025-11-26 21:36:35'),
+(8, '', 'Aun así, decidí seguir adelante. Con las herramientas que tenía, fui aprendiendo paso a paso, botella a botella, hasta formar mi propio criterio.\r\n\r\nCon el tiempo, nació en mí la idea de compartir ese aprendizaje y crear una guía sencilla que acompañe a cualquiera que quiera iniciar este recorrido tan apasionante.\r\n\r\nOjalá que esta pequeña guía te ayude a dar tus primeros pasos en este hermoso camino.', 1, 1, '2025-11-26 21:37:07', '2025-11-26 21:38:01');
 
 -- --------------------------------------------------------
 
@@ -717,7 +713,7 @@ ALTER TABLE `private_messages`
 -- AUTO_INCREMENT de la tabla `project_content`
 --
 ALTER TABLE `project_content`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
 
 --
 -- AUTO_INCREMENT de la tabla `reports`
