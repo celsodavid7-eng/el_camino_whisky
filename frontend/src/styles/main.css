@@ -1,0 +1,559 @@
+:root {
+    --primary: #0A0A0A;
+    --secondary: #D4AF37;
+    --accent: #8B7355;
+    --light: #F5F5F5;
+    --dark: #1A1A1A;
+}
+
+/* Ajuste para navbar fijo */
+body {
+    padding-top: 76px;
+    font-family: 'Montserrat', sans-serif;
+    background-color: var(--primary);
+    color: var(--light);
+    overflow-x: hidden;
+}
+
+/* Navbar styles */
+.navbar {
+    background: rgba(10, 10, 10, 0.95) !important;
+    backdrop-filter: blur(10px);
+    transition: all 0.3s ease;
+    border-bottom: 1px solid rgba(212, 175, 55, 0.1);
+    z-index: 1030;
+}
+
+.navbar.scrolled {
+    background: rgba(10, 10, 10, 0.98) !important;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.3);
+}
+
+.navbar-brand {
+    font-weight: 700;
+}
+
+.nav-link {
+    color: var(--light) !important;
+    font-weight: 500;
+    position: relative;
+    margin: 0 5px;
+    padding: 8px 15px !important;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+}
+
+.nav-link:hover,
+.nav-link.active {
+    background: rgba(212, 175, 55, 0.1);
+    color: var(--secondary) !important;
+}
+
+.nav-link::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 15px;
+    right: 15px;
+    height: 2px;
+    background: var(--secondary);
+    transform: scaleX(0);
+    transition: transform 0.3s ease;
+}
+
+.nav-link:hover::after,
+.nav-link.active::after {
+    transform: scaleX(1);
+}
+
+/* Dropdown styles */
+.dropdown-menu {
+    background: var(--dark) !important;
+    border: 1px solid rgba(212, 175, 55, 0.2) !important;
+    border-radius: 8px !important;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5) !important;
+}
+
+.dropdown-item {
+    color: var(--light) !important;
+    padding: 10px 15px !important;
+    transition: all 0.3s ease;
+}
+
+.dropdown-item:hover {
+    background: rgba(212, 175, 55, 0.1) !important;
+    color: var(--secondary) !important;
+}
+
+.dropdown-divider {
+    border-color: rgba(212, 175, 55, 0.2) !important;
+}
+
+/* Hero section adjustment for fixed navbar */
+.hero-section {
+    min-height: calc(100vh - 76px);
+    margin-top: -76px;
+    padding-top: 76px;
+    position: relative;
+}
+
+.hero-section .carousel {
+    height: calc(100vh - 76px);
+}
+
+.hero-section .carousel-inner,
+.hero-section .carousel-item {
+    height: 100%;
+}
+
+.slider-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    z-index: -1;
+}
+
+.slider-background::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: none;
+}
+
+.slider-content {
+    padding-top: 80px;
+}
+
+.season-badge-slider {
+    display: inline-block;
+    background: linear-gradient(135deg, var(--secondary), var(--accent));
+    color: var(--primary);
+    font-weight: 700;
+    padding: 8px 20px;
+    border-radius: 50px;
+    font-size: 0.9rem;
+    box-shadow: 0 4px 15px rgba(212, 175, 55, 0.3);
+}
+
+.carousel-indicators button {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    border: 2px solid var(--light);
+    background: transparent;
+    margin: 0 5px;
+}
+
+.carousel-indicators button.active {
+    background: var(--secondary);
+    border-color: var(--secondary);
+}
+
+.carousel-control-prev,
+.carousel-control-next {
+    width: 60px;
+    height: 60px;
+    background: rgba(212, 175, 55, 0.2);
+    border-radius: 50%;
+    top: 50%;
+    transform: translateY(-50%);
+    margin: 0 20px;
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(212, 175, 55, 0.3);
+}
+
+.carousel-control-prev:hover,
+.carousel-control-next:hover {
+    background: rgba(212, 175, 55, 0.4);
+}
+
+.title-font {
+    font-family: 'Playfair Display', serif;
+}
+
+.whisky-card {
+    background: linear-gradient(145deg, #1A1A1A, #0F0F0F);
+    border-radius: 16px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    overflow: hidden;
+    border: 1px solid rgba(212, 175, 55, 0.1);
+    position: relative;
+}
+
+.whisky-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: linear-gradient(90deg, var(--secondary), var(--accent));
+    transform: scaleX(0);
+    transition: transform 0.4s ease;
+}
+
+.whisky-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 40px rgba(212, 175, 55, 0.2);
+    border-color: rgba(212, 175, 55, 0.3);
+}
+
+.whisky-card:hover::before {
+    transform: scaleX(1);
+}
+
+.btn-gold {
+    background: linear-gradient(135deg, var(--secondary), #B8941F);
+    color: var(--primary);
+    border: none;
+    border-radius: 50px;
+    font-weight: 600;
+    padding: 12px 30px;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(212, 175, 55, 0.3);
+    position: relative;
+    overflow: hidden;
+}
+
+.btn-gold:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 25px rgba(212, 175, 55, 0.4);
+    color: var(--primary);
+}
+
+.btn-gold::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
+    transform: translateX(-100%);
+    transition: transform 0.6s ease;
+}
+
+.btn-gold:hover::after {
+    transform: translateX(100%);
+}
+
+.btn-outline-gold {
+    background: transparent;
+    color: var(--secondary);
+    border: 2px solid var(--secondary);
+    border-radius: 50px;
+    font-weight: 600;
+    padding: 12px 30px;
+    transition: all 0.3s ease;
+}
+
+.btn-outline-gold:hover {
+    background: var(--secondary);
+    color: var(--primary);
+    transform: translateY(-3px);
+    box-shadow: 0 8px 25px rgba(212, 175, 55, 0.4);
+}
+
+.section-title {
+    position: relative;
+    display: inline-block;
+    margin-bottom: 3rem;
+}
+
+.section-title::after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 0;
+    width: 60%;
+    height: 3px;
+    background: linear-gradient(90deg, var(--secondary), transparent);
+}
+
+.season-badge {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    background: linear-gradient(135deg, var(--secondary), var(--accent));
+    color: var(--primary);
+    font-weight: 700;
+    padding: 8px 15px;
+    border-radius: 50px;
+    font-size: 0.8rem;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    z-index: 2;
+}
+
+.glass-effect {
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 16px;
+}
+
+.modal-content {
+    background: var(--dark);
+    border-radius: 16px;
+    border: 1px solid rgba(212, 175, 55, 0.2);
+    color: var(--light);
+}
+
+.modal-header {
+    border-bottom: 1px solid rgba(212, 175, 55, 0.2);
+}
+
+.form-control {
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 8px;
+    color: var(--light);
+    padding: 12px 15px;
+}
+
+.form-control:focus {
+    background: rgba(255, 255, 255, 0.08);
+    border-color: var(--secondary);
+    box-shadow: 0 0 0 0.25rem rgba(212, 175, 55, 0.25);
+    color: var(--light);
+}
+
+.progress-container {
+    height: 6px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 3px;
+    overflow: hidden;
+    margin: 15px 0;
+}
+
+.progress-bar {
+    height: 100%;
+    background: linear-gradient(90deg, var(--secondary), var(--accent));
+    border-radius: 3px;
+}
+
+.star-rating {
+    color: var(--secondary);
+}
+
+.comment-card {
+    background: rgba(255, 255, 255, 0.03);
+    border-radius: 12px;
+    padding: 20px;
+    margin-bottom: 15px;
+    border-left: 3px solid var(--secondary);
+}
+
+.image-slider {
+    position: relative;
+    overflow: hidden;
+    border-radius: 12px;
+}
+
+.slider-image {
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+    display: none;
+}
+
+.slider-image.active {
+    display: block;
+}
+
+.slider-nav {
+    position: absolute;
+    bottom: 20px;
+    left: 0;
+    right: 0;
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+.slider-dot {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.5);
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.slider-dot.active {
+    background: var(--secondary);
+    transform: scale(1.2);
+}
+
+/* Nuevas secciones específicas */
+.section-divider {
+    width: 100px;
+    height: 3px;
+    background: linear-gradient(90deg, var(--secondary), var(--accent));
+    margin-bottom: 2rem;
+}
+
+/* Estilos para la sección Beginn */
+#beginn {
+    position: relative;
+    overflow: hidden;
+}
+
+#beginn::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" fill="%23D4AF37" opacity="0.03"><path d="M50 0L100 50L50 100L0 50Z"/></svg>');
+    background-size: 200px;
+    pointer-events: none;
+}
+
+/* Mobile styles */
+@media (max-width: 991.98px) {
+    body {
+        padding-top: 70px;
+    }
+    
+    .navbar-collapse {
+        background: rgba(10, 10, 10, 0.98);
+        backdrop-filter: blur(10px);
+        padding: 20px;
+        border-radius: 0 0 16px 16px;
+        margin-top: 10px;
+        border: 1px solid rgba(212, 175, 55, 0.1);
+        border-top: none;
+    }
+    
+    .nav-link {
+        margin: 5px 0;
+        text-align: center;
+    }
+    
+    .dropdown-menu {
+        background: transparent !important;
+        border: none !important;
+        box-shadow: none !important;
+        text-align: center;
+    }
+    
+    .hero-section .carousel-control-prev,
+    .hero-section .carousel-control-next {
+        width: 40px;
+        height: 40px;
+        margin: 0 10px;
+    }
+    
+    .slider-content {
+        text-align: center;
+        padding-top: 100px;
+    }
+    
+    .slider-content h1 {
+        font-size: 2rem;
+    }
+    
+    .section-divider {
+        width: 60px;
+    }
+    
+    #beginn .whisky-card {
+        margin-top: 2rem;
+    }
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .hero-section .carousel-control-prev,
+    .hero-section .carousel-control-next {
+        width: 40px;
+        height: 40px;
+        margin: 0 10px;
+    }
+    
+    .slider-content {
+        text-align: center;
+        padding-top: 100px;
+    }
+    
+    .slider-content h1 {
+        font-size: 2rem;
+    }
+}
+
+/* Agregar al final del archivo main.css existente */
+
+/* Estilos para la sección de Alianzas */
+.alliance-logo {
+    max-height: 120px;
+    max-width: 200px;
+    object-fit: contain;
+}
+
+.alliance-placeholder {
+    height: 120px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(212, 175, 55, 0.1);
+    border-radius: 12px;
+    border: 2px dashed rgba(212, 175, 55, 0.3);
+}
+
+/* Ajustes responsive para alianzas */
+@media (max-width: 768px) {
+    .alliance-logo {
+        max-height: 80px;
+        max-width: 150px;
+    }
+    
+    .alliance-placeholder {
+        height: 80px;
+    }
+}
+
+/* Estilos para la sección del proyecto */
+.proyecto-section {
+    opacity: 0;
+    animation: fadeInUp 0.8s ease forwards;
+}
+
+.proyecto-section:nth-child(1) { animation-delay: 0.1s; }
+.proyecto-section:nth-child(2) { animation-delay: 0.2s; }
+.proyecto-section:nth-child(3) { animation-delay: 0.3s; }
+.proyecto-section:nth-child(4) { animation-delay: 0.4s; }
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.proyecto-content {
+    line-height: 1.8;
+}
+
+.proyecto-cta {
+    background: linear-gradient(135deg, rgba(212, 175, 55, 0.1) 0%, rgba(212, 175, 55, 0.05) 100%);
+    backdrop-filter: blur(10px);
+}
+
+/* Mejoras de tipografía */
+.lh-lg {
+    line-height: 1.8 !important;
+}
