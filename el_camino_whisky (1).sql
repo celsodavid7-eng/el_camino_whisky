@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 26-11-2025 a las 21:39:56
+-- Tiempo de generación: 26-11-2025 a las 22:15:31
 -- Versión del servidor: 10.4.32-MariaDB
 -- Versión de PHP: 8.2.12
 
@@ -138,8 +138,8 @@ CREATE TABLE `chapter_images` (
 INSERT INTO `chapter_images` (`id`, `chapter_id`, `image_path`, `image_order`, `caption`, `created_at`) VALUES
 (2, 4, '691b7fd4d7492_imagen 9.jpeg', 0, '', '2025-11-17 20:04:36'),
 (3, 6, '692743ad12637_88.webp', 1, 'capitulo1', '2025-11-26 18:15:09'),
-(4, 7, '69274595ae999_imagen 3.jpeg', 0, '', '2025-11-26 18:23:17'),
-(5, 8, '69274632cb47d_imagen 7.jpeg', 0, '', '2025-11-26 18:25:54');
+(6, 7, '692769bab8f6e_99.jpg', 1, '', '2025-11-26 20:57:30'),
+(8, 8, '69276adc9692e_00.png', 1, '', '2025-11-26 21:02:20');
 
 -- --------------------------------------------------------
 
@@ -242,8 +242,11 @@ CREATE TABLE `home_slider` (
 --
 
 INSERT INTO `home_slider` (`id`, `chapter_id`, `image_path`, `image_caption`, `title`, `subtitle`, `button_text`, `display_order`, `is_active`, `created_at`) VALUES
-(8, NULL, 'uploads/slider/slider_1763477658_691c889ae9e7d.jpg', '', '', '', 'Ver Más', 0, 1, '2025-11-18 14:54:18'),
-(9, NULL, 'uploads/slider/slider_1763478093_691c8a4d0d16c.jpeg', '', '', '', 'Ver Más', 0, 1, '2025-11-18 15:01:33');
+(17, NULL, 'uploads/slider/slider_1764191387_69276c9b605ba.jpeg', '', '', '', 'Ver Más', 1, 1, '2025-11-26 21:09:47'),
+(18, NULL, 'uploads/slider/slider_1764191402_69276caa0d892.jpeg', '', '', '', 'Ver Más', 2, 1, '2025-11-26 21:10:02'),
+(19, NULL, 'uploads/slider/slider_1764191415_69276cb7da9bf.jpeg', '', '', '', 'Ver Más', 3, 1, '2025-11-26 21:10:15'),
+(20, NULL, 'uploads/slider/slider_1764191429_69276cc5a01c1.jpeg', '', '', '', 'Ver Más', 4, 1, '2025-11-26 21:10:29'),
+(21, NULL, 'uploads/slider/slider_1764191490_69276d025da91.jpeg', '', '', '', 'Ver Más', 0, 1, '2025-11-26 21:11:30');
 
 -- --------------------------------------------------------
 
@@ -663,7 +666,7 @@ ALTER TABLE `chapters`
 -- AUTO_INCREMENT de la tabla `chapter_images`
 --
 ALTER TABLE `chapter_images`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
 
 --
 -- AUTO_INCREMENT de la tabla `comments`
@@ -687,7 +690,7 @@ ALTER TABLE `events`
 -- AUTO_INCREMENT de la tabla `home_slider`
 --
 ALTER TABLE `home_slider`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=22;
 
 --
 -- AUTO_INCREMENT de la tabla `newsletter_campaigns`
