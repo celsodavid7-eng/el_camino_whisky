@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 26-11-2025 a las 22:15:31
+-- Tiempo de generación: 26-11-2025 a las 22:32:00
 -- Versión del servidor: 10.4.32-MariaDB
 -- Versión de PHP: 8.2.12
 
@@ -213,10 +213,7 @@ CREATE TABLE `events` (
 --
 
 INSERT INTO `events` (`id`, `title`, `description`, `event_type`, `location`, `address`, `event_date`, `event_time`, `duration`, `price`, `max_participants`, `current_participants`, `image_path`, `is_active`, `is_featured`, `registration_link`, `created_at`, `updated_at`) VALUES
-(1, 'Cata Premium: Whiskies de Islay', 'Una experiencia sensorial explorando los whiskies ahumados de la isla de Islay. Degustaremos 6 whiskies emblemáticos incluyendo Lagavulin, Laphroaig y Ardbeg.', 'tasting', 'Salón Principal El Camino del Whisky', 'Av. San Blas 123, CDE', '2025-12-15', '19:00:00', '2 horas', 50.00, 20, 0, 'event_islay.jpg', 1, 1, 'https://wa.me/595983163300?text=Me%20interesa%20la%20Cata%20Islay', '2025-11-26 18:58:21', '2025-11-26 18:58:21'),
-(2, 'Workshop: Iniciación al Whisky', 'Perfecto para principiantes. Aprenderás los fundamentos de la cata, tipos de whisky y cómo apreciar sus matices.', 'workshop', 'Sala VIP - Shopping Paris', 'Shopping Paris, Local 45, CDE', '2025-12-10', '18:30:00', '3 horas', 25.00, 15, 0, 'event_workshop.jpg', 1, 0, 'https://wa.me/595983163300?text=Me%20interesa%20el%20Workshop%20Iniciación', '2025-11-26 18:58:21', '2025-11-26 18:58:21'),
-(3, 'Masterclass: Whisky Japonés', 'Descubre la elegancia y precisión de los whiskies del Japón con 5 etiquetas premium incluyendo Yamazaki y Hibiki.', 'masterclass', 'Hotel del Lago', 'Av. del Lago 789, CDE', '2025-12-20', '20:00:00', '2.5 horas', 75.00, 12, 0, 'event_japanese.jpg', 1, 1, 'https://wa.me/595983163300?text=Me%20interesa%20la%20Masterclass%20Japonesa', '2025-11-26 18:58:21', '2025-11-26 18:58:21'),
-(4, 'Noche de Bourbon Americano', 'Explora la dulzura y carácter de los whiskies de Kentucky. Incluye bourbons artesanales y limited editions.', 'tasting', 'Bar La Cava', 'Calle Comercio 456, CDE', '2025-12-08', '19:30:00', '2 horas', 40.00, 25, 0, 'event_bourbon.jpg', 1, 0, 'https://wa.me/595983163300?text=Me%20interesa%20Noche%20Bourbon', '2025-11-26 18:58:21', '2025-11-26 18:58:21');
+(5, 'CATA CON MARIDAJE', '', 'tasting', 'ASUNCION GRAN HOTEL', '', '2025-12-19', '20:00:00', '', 55.00, 0, 0, 'event_1764192362_6927706a66122.jpeg', 1, 1, 'https://wa.me/595983163300', '2025-11-26 21:26:02', '2025-11-26 21:26:02');
 
 -- --------------------------------------------------------
 
@@ -351,11 +348,11 @@ CREATE TABLE `project_content` (
 
 INSERT INTO `project_content` (`id`, `section_title`, `section_content`, `display_order`, `is_active`, `created_at`, `updated_at`) VALUES
 (1, 'Apreciado lector:', 'Así como vos, un día —hace ya algunos años— decidí que quería conocer más sobre este apreciado y, para muchos, misterioso espirituoso. Pensé que el camino sería fácil: después de todo, hoy existen infinidad de canales de información y personas dispuestas a compartir su experiencia en casi cualquier tema. ¡Pero grande fue mi sorpresa cuando descubrí que no era así!', 1, 1, '2025-11-26 13:56:44', '2025-11-26 13:56:44'),
-(2, 'El Desafío Inicial', 'Pronto me di cuenta de que no existe un camino claro para quienes desean empezar desde cero. La mayoría de los canales hablan de botellas específicas, describen notas de cata y cuentan detalles sobre las destilerías —algo valioso, sin duda—, pero nadie explica qué botellas comprar, dónde hacerlo o cómo leer una etiqueta. Y si encontrás a alguien que más o menos lo hace, suele referirse a un mercado muy distinto al nuestro.', 2, 1, '2025-11-26 13:56:44', '2025-11-26 13:56:44'),
-(3, 'La Determinación', 'Aun así, decidí seguir adelante. Con las herramientas que tenía, fui aprendiendo paso a paso, botella a botella, hasta formar mi propio criterio. Cada sorbo era una lección, cada aroma un descubrimiento, y cada botella una nueva página en este libro sensorial que estaba escribiendo con mi paladar.', 3, 1, '2025-11-26 13:56:44', '2025-11-26 13:56:44'),
-(4, 'El Nacimiento del Proyecto', 'Con el tiempo, nació en mí la idea de compartir ese aprendizaje y crear una guía sencilla que acompañe a cualquiera que quiera iniciar este recorrido tan apasionante. No quería que otros tuvieran que pasar por las mismas dificultades que yo enfrenté. Quería allanar el camino, hacerlo accesible y disfrutable desde el primer momento.', 4, 1, '2025-11-26 13:56:44', '2025-11-26 13:56:44'),
-(5, 'Nuestra Filosofía', 'Creemos que el whisky no es solo una bebida, sino una experiencia cultural, un viaje sensorial que conecta tradiciones, territorios y personas. Cada botella cuenta una historia, cada destilería tiene su alma, y cada cata es una oportunidad para descubrir algo nuevo sobre nosotros mismos.', 5, 1, '2025-11-26 13:56:44', '2025-11-26 13:56:44'),
-(6, 'El Mensaje Final', 'Ojalá que esta pequeña guía te ayude a dar tus primeros pasos en este hermoso camino. Que cada sorbo te acerque no solo al entendimiento del whisky, sino al placer de descubrir, aprender y compartir. El camino del whisky es, en definitiva, el camino del conocimiento sensorial.', 6, 1, '2025-11-26 13:56:44', '2025-11-26 13:56:44');
+(2, '...', 'Pronto me di cuenta de que no existe un camino claro para quienes desean empezar desde cero. La mayoría de los canales hablan de botellas específicas, describen notas de cata y cuentan detalles sobre las destilerías —algo valioso, sin duda—, pero nadie explica qué botellas comprar, dónde hacerlo o cómo leer una etiqueta. Y si encontrás a alguien que más o menos lo hace, suele referirse a un mercado muy distinto al nuestro.', 2, 1, '2025-11-26 13:56:44', '2025-11-26 21:28:05'),
+(3, '...', 'Aun así, decidí seguir adelante. Con las herramientas que tenía, fui aprendiendo paso a paso, botella a botella, hasta formar mi propio criterio. Cada sorbo era una lección, cada aroma un descubrimiento, y cada botella una nueva página en este libro sensorial que estaba escribiendo con mi paladar.', 3, 1, '2025-11-26 13:56:44', '2025-11-26 21:28:32'),
+(4, '...', 'Con el tiempo, nació en mí la idea de compartir ese aprendizaje y crear una guía sencilla que acompañe a cualquiera que quiera iniciar este recorrido tan apasionante. No quería que otros tuvieran que pasar por las mismas dificultades que yo enfrenté. Quería allanar el camino, hacerlo accesible y disfrutable desde el primer momento.', 4, 1, '2025-11-26 13:56:44', '2025-11-26 21:28:41'),
+(5, '...', 'Creemos que el whisky no es solo una bebida, sino una experiencia cultural, un viaje sensorial que conecta tradiciones, territorios y personas. Cada botella cuenta una historia, cada destilería tiene su alma, y cada cata es una oportunidad para descubrir algo nuevo sobre nosotros mismos.', 5, 1, '2025-11-26 13:56:44', '2025-11-26 21:28:54'),
+(6, '...', 'Ojalá que esta pequeña guía te ayude a dar tus primeros pasos en este hermoso camino. Que cada sorbo te acerque no solo al entendimiento del whisky, sino al placer de descubrir, aprender y compartir. El camino del whisky es, en definitiva, el camino del conocimiento sensorial.', 6, 1, '2025-11-26 13:56:44', '2025-11-26 21:29:06');
 
 -- --------------------------------------------------------
 
@@ -684,13 +681,13 @@ ALTER TABLE `contact_messages`
 -- AUTO_INCREMENT de la tabla `events`
 --
 ALTER TABLE `events`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 
 --
 -- AUTO_INCREMENT de la tabla `home_slider`
 --
 ALTER TABLE `home_slider`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=22;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=23;
 
 --
 -- AUTO_INCREMENT de la tabla `newsletter_campaigns`
