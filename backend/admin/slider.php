@@ -646,11 +646,7 @@ $chapters = $pdo->query("
                                 </table>
                             </div>
                             
-                            <div class="text-end mt-3">
-                                <button type="submit" class="btn btn-warning fw-bold">
-                                    <i class="bi bi-save me-2"></i>Guardar Orden
-                                </button>
-                            </div>
+                             
                         </form>
                     </div>
                 </div>
